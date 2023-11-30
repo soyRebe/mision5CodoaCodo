@@ -52,7 +52,7 @@ const mainController = {
         res.send( 'Route post for item id' +  id );
     },
     getCart:( req, res )=> { 
-        res.send('Route for cart view');
+        res.render('carrito');
     },
     postCart:( req, res )=> { 
         res.send('Route for post cart view');
