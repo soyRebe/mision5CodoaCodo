@@ -1,11 +1,19 @@
+// import { getItems } from '../service/itemService';
+const itemService = require('../service/itemService')
 const path = require('path');
 const fs = require('fs');
 
 
 const mainController = {
-    home: ( req, res )=> { 
-       // res.sendFile(path.resolve(__dirname, '..' , '..', 'public', 'index.html' ));
-        res.render('home');
+    home:( req, res )=> {       
+       itemService.getItems().then( items => {
+           //console.log(items);
+           res.render('home',{
+            title: 'Home | FunkoShop',
+            items                  
+        });
+       });
+        
     },
     contact: ( req, res )=> {  
         res.send('Route for Contact View');
@@ -16,35 +24,51 @@ const mainController = {
     faqs:( req, res )=>{ 
         res.send('Route for Faqs View');
     },
-    shop: ( req, res )=> {    
-        res.render('shop');
-       // res.sendFile(path.resolve(__dirname, '..' , '..', 'public', 'pages', 'shop.html' ));    
-       /*const data = fs.readFileSync(path.resolve(__dirname, '..', 'data', 'items.json') );
-       res.send(JSON.parse(data));*/
-      
+    shop: ( req, res )=> {   
+     itemService.getItems().then( items => { 
+            res.render('shop', {
+                title: 'Shop | FunkoShop',
+                items
+            });
+        });
     },
+
     getShopItemById: ( req, res )=> {      
-        res.sendFile(path.resolve(__dirname, '..' , '..', 'public', 'pages', 'item.html' )); 
-       /* const data = fs.readFileSync(path.resolve(__dirname, '..', 'data', 'items.json') );
+        const data = fs.readFileSync(path.resolve(__dirname, '..', 'data', 'items.json') );
         const items = JSON.parse(data);
-        const itemSelected = items.find( item => item.product_id == req.params.id);
-        res.send(itemSelected)*/
+        const item = items.find( item => item.product_id == req.params.id);
        
+       if (item) {
+        console.log(item.product_id)
+        res.render('item',{
+            title: 'item | FunkoShop',
+            item,
+            items
+        });
+       } else {
+        res.render('page_error');
+       }
+    
     },
     
-    getShopItemByItem: ( req, res )=> {         
-        res.render('item'); 
-        //res.sendFile(path.resolve(__dirname, '..' , '..', 'public', 'pages', 'item.html' )); 
-        /*const data = fs.readFileSync(path.resolve(__dirname, '..', 'data', 'items.json') );
+    getShopItemByItem: ( req, res )=> {      
+        const data = fs.readFileSync(path.resolve(__dirname, '..', 'data', 'items.json') );
         const items = JSON.parse(data);
-        console.log(req.query)
+      
         if(req.query.search) {
-            const resultado = items.filter(item => item.product_name.toLowerCase().includes(req.query.search));
-            res.send(resultado);
+            const itemsFiltrados = items.filter(item => {
+                return item.licence_name.toLowerCase().includes(req.query.search.toLowerCase())
+            });
+           res.render('shop', { 
+            title: 'Shop',
+            items: itemsFiltrados
+         });
         } else {
-            res.sendFile(__dirname, '..', 'data', 'items.json');
-        }*/
-       
+            res.render('shop', { 
+                title: 'Shop',
+                items });
+        }
+   
     },
 
     postShopItemById:( req, res )=> {  
@@ -52,14 +76,18 @@ const mainController = {
         res.send( 'Route post for item id' +  id );
     },
     getCart:( req, res )=> { 
-        res.render('carrito');
+        res.render('carrito', {
+            title: 'Carrito | FunkoShop'
+        });
     },
     postCart:( req, res )=> { 
         res.send('Route for post cart view');
     },
 
    login:( req, res )=> {
-        res.render('login');
+        res.render('login', {
+            title: 'Login | FunkoShop'
+        });
        // res.sendFile(path.resolve(__dirname, '..' , 'pages', 'login.html' )); 
     },
 
@@ -67,7 +95,9 @@ const mainController = {
         res.send('route for login');
     },
     getRegister:( req, res )=> {
-        res.render('register');
+        res.render('register', {
+            title: 'Registro | FunkoShop'
+        });
     },
     postRegister:( req, res )=> {
         res.send('route for post register');
@@ -76,7 +106,9 @@ const mainController = {
         res.render('login');
     },
     admin:( req, res )=> { 
-        res.render('listadoProductos');
+        res.render('listadoProductos', {
+            title: 'Listado | FunkoShop'
+        });
        // res.sendFile(path.resolve(__dirname,  'listadoProductos.html' )); 
        //res.sendFile(path.resolve(__dirname, '..' , '..', 'public', 'pages', 'listadoProductos.html' )); 
     },
@@ -87,14 +119,18 @@ const mainController = {
     
     getAdminCreate:( req, res )=> {
         //const id = req.params.id;
-        res.render('create');
+        res.render('create', {
+            title: 'Crear | FunkoShop'
+        });
    },
    postAdminCreate:( req, res)=> {
     //const id = req.params.id;
     res.send('route post create id');
    },
    getAdminEditById:( req, res )=> {   
-    res.render('edit');
+    res.render('edit', {
+        title: 'Editar | FunkoShop'
+    });
     //res.send('Route for admin view by id' + id);
    },
    putAdminEditById:( req, res )=> {   
