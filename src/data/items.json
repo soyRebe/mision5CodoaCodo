@@ -8,8 +8,8 @@
     "product_price": 1799.99,
     "dues": 10,
     "product_sku": "PKM001001",
-    "img_front": "assets/img/pokemon/pidgeotto-1.webp",
-    "img_back": "assets/img/pokemon/pidgeotto-box.webp"
+    "img_front": "/assets/img/pokemon/pidgeotto-1.webp",
+    "img_back": "/assets/img/pokemon/pidgeotto-box.webp"
   },
   {
     "product_id": 2,
@@ -20,8 +20,8 @@
     "product_price": 1799.99,
     "dues": 10,
     "product_sku": "PKM001002",
-    "img_front": "assets/img/pokemon/pikachu-1.webp",
-    "img_back": "assets/img/pokemon/pikachu-box.webp"
+    "img_front": "/assets/img/pokemon/pikachu-1.webp",
+    "img_back": "/assets/img/pokemon/pikachu-box.webp"
   },
   {
     "product_id": 3,
@@ -32,8 +32,8 @@
     "product_price": 1799.99,
     "dues": 10,
     "product_sku": "PKM001003",
-    "img_front": "assets/img/pokemon/dragonite-1.webp",
-    "img_back": "assets/img/pokemon/dragonite-box.webp"
+    "img_front": "/assets/img/pokemon/dragonite-1.webp",
+    "img_back": "/assets/img/pokemon/dragonite-box.webp"
   },
   {
     "product_id": 4,
@@ -44,8 +44,8 @@
     "product_price": 1799.99,
     "dues": 10,
     "product_sku": "PKM001004",
-    "img_front": "assets/img/pokemon/dragonite-1.webp",
-    "img_back": "assets/img/pokemon/dragonite-box.webp"
+    "img_front": "/assets/img/pokemon/vulpix-1.webp",
+    "img_back": "/assets/img/pokemon/vulpix-box-1.webp"
   },
   {
     "product_id": 5,
@@ -56,8 +56,8 @@
     "product_price": 1799.99,
     "dues": 10,
     "product_sku": "PKM001005",
-    "img_front": "assets/img/pokemon/charmander-1.webp",
-    "img_back": "assets/img/pokemon/charmander-box.webp"
+    "img_front": "/assets/img/pokemon/charmander-1.webp",
+    "img_back": "/assets/img/pokemon/charmander-box.webp"
   },
   {
     "product_id": 6,
@@ -68,20 +68,8 @@
     "product_price": 1799.99,
     "dues": 10,
     "product_sku": "STW001001",
-    "img_front": "assets/img/star-wars/baby-yoda-1.webp",
-    "img_back": "assets/img/star-wars/baby-yoda-box.webp"
-  },
-  {
-    "product_id": 6,
-    "licence_name": "Star Wars",
-    "category_name": "Figuras coleccionables",
-    "product_name": "Baby Yoda",
-    "product_description": "Figura coleccionable Star Wars",
-    "product_price": 1799.99,
-    "dues": 10,
-    "product_sku": "STW001001",
-    "img_front": "assets/img/star-wars/baby-yoda-1.webp",
-    "img_back": "assets/img/star-wars/baby-yoda-box.webp"
+    "img_front": "/assets/img/star-wars/baby-yoda-1.webp",
+    "img_back": "/assets/img/star-wars/baby-yoda-box.webp"
   },
   {
     "product_id": 7,
@@ -92,8 +80,8 @@
     "product_price": 1799.99,
     "dues": 10,
     "product_sku": "STW001002",
-    "img_front": "assets/img/star-wars/bobbafeth-1.webp",
-    "img_back": "assets/img/star-wars/bobbafeth-box.webp"
+    "img_front": "/assets/img/star-wars/bobbafeth-1.webp",
+    "img_back": "/assets/img/star-wars/bobbafeth-box.webp"
   },
   {
     "product_id": 8,
@@ -104,8 +92,8 @@
     "product_price": 1799.99,
     "dues": 10,
     "product_sku": "STW001003",
-    "img_front": "assets/img/star-wars/luke-1.webp",
-    "img_back": "assets/img/star-wars/luke-box.webp"
+    "img_front": "/assets/img/star-wars/luke-1.webp",
+    "img_back": "/assets/img/star-wars/luke-box.webp"
   },
 
   {
@@ -117,8 +105,8 @@
     "product_price": 1799.99,
     "dues": 10,
     "product_sku": "STW001004",
-    "img_front": "assets/img/star-wars/trooper-1.webp",
-    "img_back": "assets/img/star-wars/trooper-box.webp"
+    "img_front": "/assets/img/star-wars/trooper-1.webp",
+    "img_back": "/assets/img/star-wars/trooper-box.webp"
   },
   {
     "product_id": 10,
@@ -129,8 +117,8 @@
     "product_price": 1799.99,
     "dues": 10,
     "product_sku": "HPT001001",
-    "img_front": "assets/img/harry-potter/harry-1.webp",
-    "img_back": "assets/img/harry-potter/harry-box.webp"
+    "img_front": "/assets/img/harry-potter/harry-1.webp",
+    "img_back": "/assets/img/harry-potter/harry-box.webp"
   },
   {
     "product_id": 11,
@@ -141,8 +129,8 @@
     "product_price": 1799.99,
     "dues": 10,
     "product_sku": "HPT001002",
-    "img_front": "assets/img/harry-potter/hermione-1.webp",
-    "img_back": "assets/img/harry-potter/hermione-box.webp"
+    "img_front": "/assets/img/harry-potter/hermione-1.webp",
+    "img_back": "/assets/img/harry-potter/hermione-box.webp"
   },
   {
     "product_id": 12,
@@ -153,8 +141,8 @@
     "product_price": 1799.99,
     "dues": 10,
     "product_sku": "HPT001003",
-    "img_front": "assets/img/harry-potter/luna-1.webp",
-    "img_back": "assets/img/harry-potter/luna-box.webp"
+    "img_front": "/assets/img/harry-potter/luna-1.webp",
+    "img_back": "/assets/img/harry-potter/luna-box.webp"
   },
   {
     "product_id": 13,
@@ -165,8 +153,9 @@
     "product_price": 1799.99,
     "dues": 10,
     "product_sku": "HPT001004",
-    "img_front": "assets/img/harry-potter/snape-1.webp",
-    "img_back": "assets/img/harry-potter/snape-box.webp"
+    "img_front": "/assets/img/harry-potter/snape-patronus-1.webp",
+    "img_back": "/assets/img/harry-potter/snape-patronus-box.webp"
   }
 
 ]
+
