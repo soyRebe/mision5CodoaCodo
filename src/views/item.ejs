@@ -1,15 +1,20 @@
 <%- include('./partials/header_shop.ejs') %>
   <main>
+   <!-- <ul>
+      <% for (let item in items) { %>
+        <li><%= item %>: <%= items [item.licence_name] %></li>
+      <% } %>
+    </ul>-->
     <div class="container mt-5">
       <section class="row align-items-center mobile-collection">
         <picture class="col-12 col-sm-6 d-block d-sm-none">
-            <img src="../assets/img/star-wars/baby-yoda-1.webp" alt="Figura de Baby Yoda" />
+            <img src="<%=item.img_front%>" alt="" />
         </picture>
         <article class="col-12 col-sm-6 mobile-collection order-1">
-             <p class="card-title card-item__licence_item">STAR WARS</p>
-             <h1 class="collection__title_item mb-3">BABY YODA BLUEBALL</h1>
-             <p class="collection__text_item_item mb-3">Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición limitada.</p>
-             <p class="collection_item_item_price">$ 1799,99</p>
+             <p class="card-title card-item__licence_item"><%= item.licence_name%></p>
+             <h1 class="collection__title_item mb-3"><%= item.product_name%></h1>
+             <p class="collection__text_item_item mb-3"><%= item.product_description%></p>
+             <p class="collection_item_item_price"><%= item.product_price%></p>
              <div class="row">
                 <div class="col-12 col-lg-4 d-flex">
                   <input class="form-control"type="text" name="quantity" id="quantity" placeholder="0" />
@@ -28,7 +33,7 @@
             <!---<a class="collection__link mb-3 d-inline-block"href="pages/item.html">VER COLECCIÓN</a> -->
         </article>
         <picture class="col-12 col-sm-6 d-none d-sm-block order-0">
-            <img src="../assets/img/star-wars/baby-yoda-1.webp" alt="Figura de Baby Yoda" />
+            <img src="<%=item.img_front%>" alt="" />
         </picture>
     </section>
     <div class="mt-4">
