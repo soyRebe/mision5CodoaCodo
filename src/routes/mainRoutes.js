@@ -11,8 +11,8 @@ const mainController = require('../controllers/mainController')
 /* MAIN ROUTES */
 
 router.get('/', mainController.home);
-router.get('/contact',mainController.contact);
-router.get('/about', mainController.about);
+//router.get('/contact',mainController.contact);
+//router.get('/about', mainController.about);
 
 
 module.exports = router;
