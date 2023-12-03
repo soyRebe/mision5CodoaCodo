@@ -61,111 +61,29 @@
               </label>
             </div>
           </div>
-
-
         </div>
         <div class="col-12 col-md-10 mb-4">
           <div class="row">
+            <% items.forEach(function(item) { %>
             <div class="col-12 col-md-4">
               <div class="card border-0">
                 <div class="d-flex justify-content-end p-2">
                   <button class="btn btn-primary rounded-0 text-white py-4 px-4">NUEVO</button>
                 </div>
-                <img src="../assets/img/star-wars/trooper-1.webp" class="card-img-top" alt="...">
+                <a class="card-item__link" href="/shop/item/<%=item.product_id %>">
+                  <img src="<%= item.img_front %>" class="card-img-top" alt="...">
+                </a>
                 <div class="card-body">
-                  <p class="card-title card-item__licence">STAR WARS</p>
-                  <h4 class="card-item__name">STORMTROOPER LIGHTSABER</h4>
+                  <p class="card-title card-item__licence"><%= item.licence_name %></p>
+                  <h4 class="card-item__name"><%= item.product_name %></h4>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item card-item__price border-0">$ 1799,99</li>
+                  <li class="list-group-item card-item__price border-0"><%= item.product_price %></li>
                   <li class="list-group-item card-item__promo">3 CUOTAS SIN INTERÉS</li>
                 </ul>
               </div>
             </div>
-            <div class="col-12 col-md-4">
-              <div class="card border-0">
-                <div class="d-flex justify-content-end p-2">
-                  <button class="btn btn-primary rounded-0 text-white py-4 px-4">NUEVO</button>
-                </div>
-                <img src="../assets/img/pokemon/pidgeotto-1.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-title card-item__licence">POKEMON</p>
-                  <h4 class="card-item__name">PIDGEOTTO.</h4>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item border-0 card-item__price">$ 1799,99</li>
-                  <li class="list-group-item card-item__promo">3 CUOTAS SIN INTERÉS</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-12 col-md-4">
-              <div class="card border-0">
-                <div class="d-flex justify-content-end p-2">
-                  <button class="btn btn-primary rounded-0 text-white py-4 px-4">NUEVO</button>
-                </div>
-                <img src="../assets/img/harry-potter/luna-1.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-title card-item__licence">HARRY POTTER</p>
-                  <h4 class="card-item__name">LUNA LOVEGOOD LION MASK</h4>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item card-item__price border-0">$ 1799,99</li>
-                  <li class="list-group-item card-item__promo">3 CUOTAS SIN INTERÉS</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-10 mb-4 offset-md-2 mt-4">
-          <div class="row">
-            <div class="col-12 col-md-4">
-              <div class="card border-0">
-                <div class="d-flex justify-content-end p-2">
-                  <button class="btn btn-primary rounded-0 text-white py-4 px-4">NUEVO</button>
-                </div>
-                <img src="../assets/img/star-wars/trooper-1.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-title card-item__licence">STAR WARS</p>
-                  <h4 class="card-item__name">STORMTROOPER LIGHTSABER</h4>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item card-item__price border-0">$ 1799,99</li>
-                  <li class="list-group-item card-item__promo">3 CUOTAS SIN INTERÉS</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-12 col-md-4">
-              <div class="card border-0">
-                <div class="d-flex justify-content-end p-2">
-                  <button class="btn btn-primary rounded-0 text-white py-4 px-4">NUEVO</button>
-                </div>
-                <img src="../assets/img/pokemon/pidgeotto-1.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-title card-item__licence">POKEMON</p>
-                  <h4 class="card-item__name">PIDGEOTTO.</h4>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item border-0 card-item__price">$ 1799,99</li>
-                  <li class="list-group-item card-item__promo">3 CUOTAS SIN INTERÉS</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-12 col-md-4">
-              <div class="card border-0">
-                <div class="d-flex justify-content-end p-2">
-                  <button class="btn btn-primary rounded-0 text-white py-4 px-4">NUEVO</button>
-                </div>
-                <img src="../assets/img/harry-potter/luna-1.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-title card-item__licence">HARRY POTTER</p>
-                  <h4 class="card-item__name">LUNA LOVEGOOD LION MASK</h4>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item card-item__price border-0">$ 1799,99</li>
-                  <li class="list-group-item card-item__promo">3 CUOTAS SIN INTERÉS</li>
-                </ul>
-              </div>
-            </div>
+            <% }); %>
           </div>
         </div>
       </div>
